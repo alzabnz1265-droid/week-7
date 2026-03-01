@@ -1,0 +1,11 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(r"C:\Users\Admin\Downloads\day32_relationships.csv")
+
+sns.scatterplot(x="x_value", y="y_value", data=df)
+plt.show()
+
+sns.relplot(x="x_value", y="y_value", col="category", data=df)
+plt.show()
