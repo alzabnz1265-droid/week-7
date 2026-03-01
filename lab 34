@@ -1,0 +1,23 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(r"C:\Users\Admin\Downloads\day34_patterns.csv")
+
+sns.relplot(
+    x="x_value",
+    y="y_value",
+    col="category", 
+    kind="line", 
+    data=df
+)
+plt.show()
+
+sns.catplot(
+    x="category",
+    y="y_value",
+    hue="group",    
+    kind="point",   
+    data=df
+)
+plt.show()
