@@ -1,0 +1,21 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(r"C:\Users\Admin\Downloads\day31_seaborn.csv")
+
+plt.figure()
+sns.histplot(df["value"])
+plt.show()
+
+plt.figure()
+sns.kdeplot(df["value"])
+plt.show()
+
+plt.figure()
+sns.boxplot(x=df["value"])
+plt.show()
+
+plt.figure()
+sns.countplot(x=df["category"])
+plt.show()
